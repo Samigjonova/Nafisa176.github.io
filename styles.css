@@ -1,0 +1,53 @@
+/* Styles to reproduce the provided page appearance */
+:root{
+  --page-bg: #5b564d;
+  --panel-bg: #605b4e;
+  --accent: #9cc5ff;
+  --muted: #d6d2c7;
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--muted);
+}
+#page{
+  max-width:900px;
+  margin:30px auto;
+  padding:30px 40px;
+  background: var(--panel-bg);
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.02) inset;
+}
+h1{
+  color: var(--accent);
+  font-size:48px;
+  margin:0 0 12px 0;
+  font-weight:700;
+}
+.lead{font-size:16px; margin:6px 0 18px 0;}
+.highlight{color:#fff3a0}
+hr{border:0;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0 18px 0}
+h2{color:var(--accent);font-size:22px;margin-top:18px}
+ul,ol{margin-left:1.3em}
+.muted{font-style:italic;color:#cfc9c0}
+
+.moods{display:flex;gap:30px;margin-top:12px}
+.mood{list-style:none;margin:0;padding:0}
+.mood img{
+  display:block;
+  width:220px;
+  height:300px;
+  object-fit:cover;
+  border:8px solid #6b655b;
+  background:#fff;
+}
+.mood figcaption{color:#e6e1d6;margin-top:8px}
+
+.badges img{vertical-align:middle;margin-right:8px}
+
+/* Small screens: stack images */
+@media (max-width:640px){
+  .moods{flex-direction:column}
+  .mood img{width:100%;height:auto}
+}
